@@ -1,57 +1,84 @@
-#!/bin/bash
+# 🧭 Kanban Tasks – React + Go  
 
-# 🧭 Kanban Tasks – React + Go
-# Script de setup e informações do projeto
+Aplicação **Full Stack** de gerenciamento de tarefas no estilo **Kanban**, com frontend em **React (Vite)** e backend em **Go (Golang)**.
 
-# ------------------------------------------------------------
-# 🚀 Funcionalidades
-# ------------------------------------------------------------
-# As funcionalidades estão implícitas no código:
-# - Adicionar, editar e excluir tarefas
-# - Drag & Drop entre colunas
-# - Tema claro/escuro
-# - Persistência em tasks.json
-# - Feedbacks visuais
-# - Scroll suave
-# - Backend em Go
+Permite criar, editar, mover e excluir tarefas entre colunas, com **persistência local** em arquivo JSON e **interface moderna** com suporte a **tema claro e escuro**.
 
-# ------------------------------------------------------------
-# ⚙️ Como Executar
-# ------------------------------------------------------------
+---
 
-# Backend (Go)
+## 🚀 Funcionalidades
+
+- ✅ Adicionar, editar e excluir tarefas  
+- 🔄 Arrastar e soltar (Drag & Drop) entre colunas  
+- 🌓 Alternar entre tema claro e escuro  
+- 💾 Persistência em `tasks.json`  
+- 🎨 Feedbacks visuais e scroll suave  
+- ⚙️ Backend em Go para gerenciamento das tarefas  
+
+---
+
+## 🧰 Tecnologias Utilizadas
+
+- **Frontend:** React + Vite  
+- **Backend:** Go (Golang)  
+- **Estilização:** CSS puro (modo claro/escuro)  
+
+---
+
+## ⚙️ Como Executar
+
+> ⚠️ **Atenção:**  
+> Se você baixou o projeto como `.zip`, ele pode ter sido extraído com uma pasta dentro da outra.  
+> Nesse caso, o caminho será:
+> `desafio-fullstack-veritas-main/desafio-fullstack-veritas-main/`
+
+1. **Abra o terminal e entre na pasta do projeto:**
+   ```bash
+   cd "C:\Users\leonardo\Downloads\desafio-fullstack-veritas-main\desafio-fullstack-veritas-main"
+Inicie o backend (Go):
+
+bash
+Copiar código
 cd backend
 go run .
+Volte um nível e inicie o frontend (React + Vite):
 
-# Frontend (React + Vite)
+bash
+Copiar código
+cd ..
 cd frontend
 npm install
 npm start
+Acesse no navegador:
 
-# ------------------------------------------------------------
-# 📡 API Endpoints
-# ------------------------------------------------------------
-# GET    /tasks       -> Retorna todas as tarefas
-# POST   /tasks       -> Adiciona uma nova tarefa
-# PUT    /tasks/:id   -> Atualiza uma tarefa existente
-# DELETE /tasks/:id   -> Remove uma tarefa
+arduino
+Copiar código
+http://localhost:5173
+📡 API Endpoints
+Método	Endpoint	Descrição
+GET	/tasks	Retorna todas as tarefas
+POST	/tasks	Adiciona uma nova tarefa
+PUT	/tasks/:id	Atualiza uma tarefa existente
+DELETE	/tasks/:id	Remove uma tarefa
 
-# ------------------------------------------------------------
-# 🧹 Limpar Dados
-# ------------------------------------------------------------
-# Pare o backend: CTRL + C
-rm ../backend/tasks.json
-go run .
-# O contador de IDs será resetado automaticamente
+🧹 Limpar Dados
+Para reiniciar o arquivo de tarefas e zerar o contador de IDs:
 
-# ------------------------------------------------------------
-# 📦 Tecnologias Utilizadas
-# ------------------------------------------------------------
-# Frontend: React + Vite
-# Backend: Go (Golang)
-# Estilo: CSS puro (modo claro/escuro)
+bash
+Copiar código
+# Pare o backend (CTRL + C)
+cd ../backend
+rm tasks.json
+go run main.go
 
-# ------------------------------------------------------------
-# 👨‍💻 Autor
-# ------------------------------------------------------------
-# Desenvolvido com 💙 por Leonardo
+📝 Observações
+
+O projeto utiliza persistência local via tasks.json, sem banco de dados externo.
+
+O contador de IDs é automaticamente resetado ao apagar o arquivo.
+
+O frontend se comunica com o backend por requisições HTTP REST.
+
+👨‍💻 Autor
+
+Desenvolvido com 💙 por Leonardo Antonio
