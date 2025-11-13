@@ -16,26 +16,6 @@ Um quadro de tarefas moderno e leve, com drag-and-drop, modo escuro e persistên
 
 ---
 
-## 🧩 Estrutura do Projeto
-
-kanban-tasks/
-├── backend/
-│   ├── main.go
-│   ├── tasks.json
-│   └── go.mod
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── App.jsx
-│   │   ├── main.jsx
-│   │   └── styles.css
-│   ├── index.html
-│   ├── package.json
-│   └── vite.config.js
-└── README.md
-
----
-
 ## ⚙️ Como Executar
 
 ### 🔧 Backend (Go)
