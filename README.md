@@ -24,7 +24,7 @@ cd backend
 go run .
 
 # Frontend (React + Vite)
-cd ../frontend
+cd frontend
 npm install
 npm start
 
