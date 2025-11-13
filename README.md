@@ -41,7 +41,7 @@ npm start
 # ------------------------------------------------------------
 # Pare o backend: CTRL + C
 rm ../backend/tasks.json
-go run ../backend/main.go
+go run .
 # O contador de IDs será resetado automaticamente
 
 # ------------------------------------------------------------
