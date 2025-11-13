@@ -40,13 +40,13 @@ kanban-tasks/
 
 ### 🔧 Backend (Go)
 
-cd backend
+cd backend, 
 go run main.go
 
 ### 💻 Frontend (React + Vite)
 
-cd frontend
-npm install
+cd frontend, 
+npm install, 
 npm run dev
 
 Acesse o app em:  
