@@ -1,0 +1,219 @@
+/* ======== RESET E BASE ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* ======== VARIÁVEIS DE TEMA ======== */
+:root {
+  --bg: #f5f6fa;
+  --text: #222;
+  --card-bg: #fff;
+  --border: #e2e2e2;
+  --accent: #007bff;
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+body.dark {
+  --bg: #181818;
+  --text: #f5f5f5;
+  --card-bg: #242424;
+  --border: #333;
+  --accent: #4ea1ff;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* ======== HEADER ======== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 6px var(--shadow);
+}
+
+.theme-toggle {
+  padding: 0.4rem 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+.theme-toggle:hover {
+  opacity: 0.85;
+}
+
+/* ======== LAYOUT DAS COLUNAS ======== */
+.columns {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  justify-content: center;
+  overflow-x: auto;
+}
+
+.column {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  width: 300px;
+  box-shadow: 0 2px 5px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s;
+}
+
+.column h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* ======== CARDS ======== */
+.task-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.8rem;
+  margin-bottom: 0.7rem;
+  cursor: grab;
+  box-shadow: 0 1px 3px var(--shadow);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.task-card:active {
+  cursor: grabbing;
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+/* ======== INPUTS ======== */
+.column input,
+.column textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  resize: none;
+}
+
+/* ======== BOTÕES ======== */
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button.add {
+  background: var(--accent);
+  color: white;
+}
+button.add:hover {
+  opacity: 0.85;
+}
+
+button.edit {
+  background: #ffa534;
+  color: white;
+}
+button.delete {
+  background: #e74c3c;
+  color: white;
+}
+
+/* ======== FEEDBACKS ======== */
+.loading,
+.error {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.loading {
+  color: var(--accent);
+}
+
+.error {
+  color: #e74c3c;
+}
+
+/* ======== DND VISUAL ======== */
+.droppable-hover {
+  background: rgba(0, 123, 255, 0.05);
+  border: 1px dashed var(--accent);
+}
+
+/* ======== ROLAGEM NAS COLUNAS ======== */
+.column {
+  max-height: 75vh;         /* altura máxima da coluna */
+  overflow-y: auto;         /* ativa a rolagem vertical */
+  scroll-behavior: smooth;  /* rolagem suave */
+}
+
+/* Deixa o scrollbar mais discreto */
+.column::-webkit-scrollbar {
+  width: 6px;
+}
+
+.column::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+  border-radius: 6px;
+}
+
+.column::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ======== FEEDBACKS INLINE (ABAIXO DO HEADER) ======== */
+.feedback-inline {
+  width: 100%;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.loading-feedback {
+  background: var(--accent);
+  color: #fff;
+  animation: pulse 1.2s infinite ease-in-out;
+}
+
+.error-feedback {
+  background: #e74c3c;
+  color: #fff;
+}
+
+/* Animações sutis */
+@keyframes pulse {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
