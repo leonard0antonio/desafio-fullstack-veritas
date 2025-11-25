@@ -17,6 +17,12 @@ Permite criar, editar, mover e excluir tarefas entre colunas, com **persistênci
 
 -----
 
+## 📷 Desmontração
+
+
+![Demo da aplicação](demo01.gif)
+
+-----
 ## 🧰 Tecnologias Utilizadas
 
   - **Frontend:** React + Vite
