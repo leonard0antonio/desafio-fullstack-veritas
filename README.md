@@ -17,7 +17,7 @@ Permite criar, editar, mover e excluir tarefas entre colunas, com **persistênci
 
 -----
 
-## 📷 Desmontração
+## 📷 Demonstração
 
 
 ![Demo da aplicação](demo01.gif)
